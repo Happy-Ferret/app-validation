@@ -1,6 +1,8 @@
 var Promise = require('bluebird');
 var _ = require('lodash');
 
+var rules = require('./rules');
+
 function buildValidator (objectRules) {
 	return function validate (data) {
 		var context = this;
@@ -51,9 +53,9 @@ function buildValidator (objectRules) {
 	}
 }
 
-buildValidator.rules = {
-
-};
+buildValidator.extendRules = function extendRules (newRules) {
+	rules = _.extend(rules, newRules);
+}
 
 function isReallyEmpty (value) {
 	return _.isNull(value) || _.isUndefined(value) ||
@@ -61,7 +63,7 @@ function isReallyEmpty (value) {
 }
 
 function resolveValidator (alias) {
-	return buildValidator.rules[alias];
+	return rules[alias];
 }
 
 module.exports = buildValidator;
