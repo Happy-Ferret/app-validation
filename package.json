@@ -1,0 +1,27 @@
+{
+  "name": "app-validation",
+  "version": "0.0.0",
+  "description": "Validation helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/boo1ean/app-validation.git"
+  },
+  "keywords": [
+    "app-helpers",
+    "validation"
+  ],
+  "author": "Egor Gumenyuk <boo1ean0807@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/boo1ean/app-validation/issues"
+  },
+  "homepage": "https://github.com/boo1ean/app-validation",
+  "dependencies": {
+    "bluebird": "^2.3.11",
+    "lodash": "^2.4.1"
+  }
+}
