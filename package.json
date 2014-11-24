@@ -1,6 +1,6 @@
 {
   "name": "app-validation",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Validation helper",
   "main": "index.js",
   "scripts": {
